@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bytecard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <style>
+
+        .centro {
+            text-align: center;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {    /* background da nav */
+            background-color: #0897E9;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 20px;
+        }
+       
+        #icone-canto {
+            position: absolute;
+            top: 25px;
+            right: 95px;
+            width: 45px; 
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+        }
+
+        a {    /* botoes de funcionalidades */
+            text-decoration: none;
+            color: #000000;
+            padding: 9px 20px;
+            margin: 0 10px;
+            background-color: #0ADBE3;
+            border-radius: 40px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input {   /* campo de cadastro */
+            width: 30%;
+            padding: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {    /* botão cadastrar e cancelar */
+            padding: 10px 25px;
+            background-color: #0ADBE3;
+            color: #000000;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav> 
+            <ul>
+            <img id="icone-canto" src="pessoa.png" alt="Ícone">
+            <a href="#clientes"><i class="fas fa-users"></i> Clientes</a>
+            <a href="#cartoes"><i class="fas fa-credit-card"></i> Cartões</a>
+            <a href="#compras"><i class="fas fa-shopping-cart"></i> Compras</a>
+            <a href="#relatorio"><i class="fas fa-chart-bar"></i> Relatório</a>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="centro">
+        <h1>Cadastrar Cartão</h1>
+        
