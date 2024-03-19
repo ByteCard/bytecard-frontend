@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-center my-5">
+  <h1>Excluir Cliente</h1>
+</div>
+<div class="bg-secondary p-5 text-white">
+  <form>
+    <div class="mb-3">
+      <label for="CPF" class="form-label">CPF</label>
+      <input type="text" class="form-control" id="CPF" name="cpf" [(ngModel)]="cliente.cpf" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="Nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="Nome" name="name" [(ngModel)]="cliente.name" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="Email" class="form-label">Email</label>
+      <input type="text" class="form-control" id="Email" name="email" [(ngModel)]="cliente.email" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="telefone" class="form-label">Telefone</label>
+      <input type="text" class="form-control" id="telefone" name="telephone" [(ngModel)]="cliente.telephone" readonly>
+    </div>
+    <div class="d-flex justify-content-center my-5">
+      <button (click)="excluirCliente()" type="submit" class="btn btn-success mx-5">Excluir</button>
+      <button (click)="cancelarExclusao()" type="submit" class="btn btn-danger">Cancelar</button>
+    </div>
+  </form>
+</div>

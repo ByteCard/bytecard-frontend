@@ -1,0 +1,41 @@
+<div class="d-flex justify-content-center my-5">
+  <h1>Editar Cliente</h1>
+</div>
+<div class="bg-secondary p-5 text-white">
+  <form (ngSubmit)="atualizarCliente()" #form="ngForm">
+    <div class="mb-3">
+      <label for="CPF" class="form-label">CPF</label>
+      <input type="text" class="form-control" id="CPF" name="cpf" placeholder="00000000000" [(ngModel)]="cliente.cpf" pattern="[0-9]{11}" required>
+      <div *ngIf="form.controls['cpf'].invalid && (form.controls['cpf'].dirty || form.controls['cpf'].touched)" class="alert alert-warning">
+        CPF inválido. Deve conter 11 dígitos numéricos.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="Nome" class="form-label">Nome (Mínimo 4 caracteres)</label>
+      <input type="text" class="form-control" id="Nome" name="name" placeholder="Nome deve ter no mínimo 4 caracteres " [(ngModel)]="cliente.name" required>
+      <div *ngIf="form.controls['name'].invalid && (form.controls['name'].dirty || form.controls['name'].touched)" class="alert alert-warning">
+        <div *ngIf="form.controls['name'].touched && cliente.name.length < 4">
+          Nome é obrigatório e deve ter no mínimo 4 caracteres.
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="Email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="Email" name="email" placeholder="exemplo@exemplo.com" [(ngModel)]="cliente.email" (input)="validarEmail(cliente.email)" required>
+      <div *ngIf="emailInvalido && (form.controls['email'].dirty || form.controls['email'].touched)" class="alert alert-warning">
+        Email inválido.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="telefone" class="form-label">Telefone</label>
+      <input type="text" class="form-control" id="telefone" name="telephone" placeholder="Somente números" [(ngModel)]="cliente.telephone" pattern="[0-9]{10,11}" required>
+      <div *ngIf="form.controls['telephone'].invalid && (form.controls['telephone'].dirty || form.controls['telephone'].touched)" class="alert alert-warning">
+        Telefone inválido. Deve conter entre 10 e 11 dígitos numéricos.
+      </div>
+    </div>
+    <div class="d-flex justify-content-center my-5">
+      <button type="submit" class="btn btn-success mx-5">Atualizar</button>
+      <button type="button" (click)="cancelarEdicao()" class="btn btn-danger">Cancelar</button>
+    </div>
+  </form>
+</div>

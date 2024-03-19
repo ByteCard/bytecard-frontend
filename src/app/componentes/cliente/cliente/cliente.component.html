@@ -1,0 +1,42 @@
+<div class="row mb-1">
+  <div class="col">{{ cliente.cpf }}</div>
+  <div class="col">{{ cliente.name }}</div>
+  <div class="col">{{ cliente.email }}</div>
+  <div class="col">{{ cliente.telephone }}</div>
+  <div class="col">
+    <button (click)="alterarCliente()" type="button" class="btn btn-success btn-sm">Alterar</button>
+    <button (click)="excluirCliente()" type="submit" class="btn btn-danger mx-2 btn-sm">Excluir</button>
+  </div>
+</div>
+
+  <!-- <th scope="row">{{ cliente.cpf }}</th>
+  <td>{{ cliente.nome }}</td>
+  <td>{{ cliente.email }}</td>
+  <td>{{ cliente.telefone }}</td>
+  <td>
+    <button>
+      <img src="" alt="">
+    </button>
+    <button>
+      <img src="" alt="">
+    </button>
+  </td> -->
+
+  <!-- <div class="row" *ngFor="let cliente of cliente">
+    <div class="col-sm border">
+      {{ cliente.cpf }}
+    </div>
+    <div class="col-sm border">
+      {{ cliente.nome }}
+    </div>
+    <div class="col-sm border">
+      {{ cliente.email }}
+    </div>
+    <div class="col-sm border">
+      {{ cliente.telefone }}
+    </div>
+    <div class="col-sm border">
+      <button (click)="alterarCliente()" type="submit" class="btn btn-success btn-sm">Alterar</button>
+      <button (click)="excluirCliente()" type="submit" class="btn btn-danger mx-2 btn-sm">Excluir</button>
+    </div>
+  </div> -->
