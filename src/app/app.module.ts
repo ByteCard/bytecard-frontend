@@ -12,6 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { EditarClienteComponent } from './componentes/cliente/editar-cliente/editar-cliente.component';
 import { ExcluirClienteComponent } from './componentes/cliente/excluir-cliente/excluir-cliente.component';
+import { ListagemCartoesComponent } from './componentes/cartoes/listagem-cartoes/listagem-cartoes.component';
+import { CartoesComponent } from './componentes/cartoes/cartoes/cartoes.component';
+import { CadastrarCartaoComponent } from './componentes/cartoes/cadastrar-cartao/cadastrar-cartao.component';
+import { AlterarLimiteComponent } from './componentes/cartoes/alterar-limite/alterar-limite.component';
+import { VerFaturaComponent } from './componentes/cartoes/ver-fatura/ver-fatura.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { ExcluirClienteComponent } from './componentes/cliente/excluir-cliente/e
     ClienteComponent,
     ListarClientesComponent,
     EditarClienteComponent,
-    ExcluirClienteComponent
+    ExcluirClienteComponent,
+    ListagemCartoesComponent,
+    CartoesComponent,
+    CadastrarCartaoComponent,
+    AlterarLimiteComponent,
+    VerFaturaComponent
   ],
   imports: [
     BrowserModule,

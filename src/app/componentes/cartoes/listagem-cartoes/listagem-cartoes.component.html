@@ -1,0 +1,64 @@
+<div>
+  <div class="d-flex justify-content-between align-items-center p-5">
+    <div class="d-flex justify-content-center">
+      <h1>Listagem de Cartões</h1>
+    </div>
+    <div>
+      <button routerLink="/cadastrarcartao" type="button" class="btn btn-outline-success">Cadastrar novo Cartão</button>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center mb-5">
+    <div class="w-25 input-group d-flex flex-column justify-content-center">
+      <div class="mb-2">
+        <input type="text" id="form1" class="form-control" placeholder="Número do cartão" />
+        <!-- <div class="alert alert-danger mt-2">
+          Número Cartão Inválido.
+        </div> -->
+      </div>
+      <div class="mb-2">
+        <input type="text" id="form1" class="form-control" placeholder="CPF cliente" />
+        <!-- <div class="alert alert-danger mt-2">
+          CPF inválido. Deve conter 11 dígitos numéricos.
+        </div> -->
+      </div>
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-outline-primary d-flex justify-content-between w-50 h-75">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-search d-flex align-items-center h-100" viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+          </svg>
+          <p class="">
+            Pesquisar
+          </p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="row mb-1">
+    <div class="col">Número</div>
+    <div class="col">Cliente</div>
+    <div class="col">Limite</div>
+    <div class="col">Validade</div>
+    <div class="col">Ações</div>
+  </div>
+  <app-cartoes></app-cartoes>
+</div>
+
+<!-- Tabela Alternativa caso não tenha cartão cadastrado -->
+<ng-template #semCartaoCadastrado>
+  <div class="d-flex justify-content-center mt-5">
+    <table class="table table-warning table-striped-columns">
+      <thead>
+        <tr>
+          <th scope="col">Nenhum Cartão Cadastrado.</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</ng-template>
