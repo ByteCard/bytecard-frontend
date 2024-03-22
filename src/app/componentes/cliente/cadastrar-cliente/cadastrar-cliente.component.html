@@ -7,7 +7,7 @@
       <label for="CPF" class="form-label">CPF</label>
       <input type="text" class="form-control" id="CPF" name="cpf" placeholder="00000000000" [(ngModel)]="cliente.cpf" pattern="[0-9]{11}" required>
       <div *ngIf="form.controls['cpf'].invalid && (form.controls['cpf'].dirty || form.controls['cpf'].touched)" class="alert alert-warning">
-        CPF inválido. Deve conter 11 dígitos numéricos.
+      Deve conter 11 dígitos numéricos.
       </div>
     </div>
     <div class="mb-3">

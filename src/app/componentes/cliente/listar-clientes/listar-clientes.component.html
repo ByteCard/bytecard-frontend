@@ -8,7 +8,7 @@
         <input type="text" id="form1" class="form-control" placeholder="Pesquisar pelo CPF" [(ngModel)]="clienteCpfPesquisa" (input)="validarCPF(clienteCpfPesquisa)"/>
         <!-- Exibir mensagem de CPF inválido -->
         <div *ngIf="!validarCPF(clienteCpfPesquisa) && clienteCpfPesquisa !== ''" class="alert alert-danger mt-2">
-          CPF inválido. Deve conter 11 dígitos numéricos.
+        Deve conter 11 dígitos numéricos.
         </div>
         <!-- Div amarela -->
         <!-- <input type="text" id="form1" class="form-control" placeholder="Pesquisar pelo CPF" [(ngModel)]="clienteCpfPesquisa" (input)="validarCPF(clienteCpfPesquisa)"/>
@@ -23,7 +23,7 @@
       </button>
     </div>
     <div>
-      <button routerLink="/cadastrarcliente" type="button" class="btn btn-outline-success">Cadastrar Cliente</button>
+      <button routerLink="/cadastrarcliente" type="button" class="btn btn-outline-primary">Cadastrar Cliente</button>
     </div>
   </div>
 </div>
