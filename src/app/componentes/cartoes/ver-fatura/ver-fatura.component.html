@@ -1,1 +1,61 @@
-<p>ver-fatura works!</p>
+<div class="d-flex justify-content-center my-5">
+  <h1>
+    Visualizar fatura
+  </h1>
+</div>
+<!-- Div dados cliente -->
+<div class="d-flex justify-content-center grid gap-0 column-gap-5 bg-secondary p-5 text-white">
+  <!-- Div campo cartao, nome e cpf -->
+  <div>
+    <div class="d-flex align-items-center grid gap-0 column-gap-2 mb-3">
+      <label for="cartaoNumero" class="form-label">Cartão:</label>
+      <input type="text" class="form-control" id="cartaoNumero" name="cartaoNumero" [(ngModel)]="cartao.numberCard"
+        readonly>
+    </div>
+    <div class="d-flex align-items-center grid gap-0 column-gap-2 mb-3">
+      <label for="cartaoNome" class="form-label">Cliente:</label>
+      <input type="text" class="form-control" id="cartaoNome" name="cartaoNome" [(ngModel)]="cartao.name" readonly>
+    </div>
+    <div class="d-flex align-items-center grid gap-0 column-gap-2">
+      <label for="cartaoCPF" class="form-label">CPF:</label>
+      <input type="text" class="form-control" id="cartaoCPF" name="cartaoCPF" [(ngModel)]="cartao.cpf" readonly>
+    </div>
+  </div>
+  <!-- Div selecionar Mes -->
+  <div class="d-flex align-items-center">
+    <div class="d-flex flex-column align-items-center">
+      <label for="selecioneMes">Selecione o mês:</label>
+      <div>
+        <input type="date" name="selecioneMes" id="selecioneMes" class="mx-2" [(ngModel)]="dataPesquisa">
+        <!-- Adicionando a chamada do método visualizarFatura() -->
+        <button type="button" (click)="visualizarFatura(); obterValorTotalFatura()" class="btn btn-success btn-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar"
+            viewBox="0 0 16 16">
+            <path
+              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z">
+            </path>
+          </svg>
+          Visualizar
+        </button>
+      </div>
+    </div>
+    </div>
+  </div>
+  <!-- Total fatura -->
+  <div class="d-flex justify-content-center my-5">
+    <h2>Valor Total da Fatura: {{ valorTotal }}</h2>
+  </div>
+  <!-- Chamar o compoenente de listagem das compras, com valor total -->
+  <div class="mt-5">
+    <div class="row mb-1">
+      <div class="col">Data</div>
+      <div class="col">Estabelecimento</div>
+      <div class="col">Categoria</div>
+      <div class="col">Valor</div>
+    </div>
+    <app-fatura *ngFor="let compra of listaCompras" [compra]="compra"></app-fatura>
+  </div>
+  <!-- Botões de voltar -->
+  <div class="d-flex justify-content-center my-5">
+    <button type="submit" (click)="voltar()" class="btn btn-success mx-5">Voltar</button>
+  </div>

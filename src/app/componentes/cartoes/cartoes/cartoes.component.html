@@ -6,11 +6,11 @@
   <div class="col d-flex">
     <button (click)="alterarLimite()" type="button" class="btn btn-secondary btn-sm">Alterar limite</button>
     <button (click)="verFatura()" type="button" class="btn btn-warning btn-sm mx-2">Ver fatura</button>
-    <button (click)="ativarDesativarCartao()" type="submit" class="btn btn-danger btn-sm">Cancelar</button>
+    <ng-container *ngIf="cartao.status">
+      <button (click)="ativarDesativarCartao()" type="submit" class="btn btn-danger btn-sm">Cancelar</button>
+    </ng-container>
+    <ng-container *ngIf="!cartao.status">
+      <button (click)="ativarDesativarCartao()" type="submit" class="btn btn-success btn-sm">Ativar</button>
+    </ng-container>
   </div>
 </div>
-
-<!-- Botão alternativo cartão ativado -->
-<ng-template #semCartaoCadastrado>
-
-</ng-template>

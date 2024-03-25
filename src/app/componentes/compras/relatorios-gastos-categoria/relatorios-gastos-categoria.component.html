@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-center my-5">
+  <h1>Relatório de gastos por categoria</h1>
+</div>
+<div class="bg-secondary p-5 text-white">
+  <!-- Div cartão -->
+  <div class="d-flex justify-content-center">
+    <div class="d-flex flex-column mx-5">
+      <label for="cartaoNumero">Cartão:</label>
+      <input type="text" id="cartaoNumero" name="cartaoNumero" placeholder="Selecione o cartao">
+    </div>
+    <!-- div Selecione o mes -->
+    <div class="d-flex align-items-center">
+      <div class="d-flex flex-column align-items-center">
+        <label for="selecioneMes">Selecione o mês:</label>
+        <div>
+          <input type="date" name="selecioneMes" id="selecioneMes" class="mx-2">
+          <button type="button" class="btn btn-success btn-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar"
+              viewBox="0 0 16 16">
+              <path
+                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z">
+              </path>
+            </svg>
+            Visualizar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Puxar a relatorio de gastor por categoria -->
+
+ <!-- Botões de voltar -->
+ <div class="d-flex justify-content-center my-5">
+  <button type="submit" (click)="voltar()" class="btn btn-success mx-5">Voltar</button>
+</div>

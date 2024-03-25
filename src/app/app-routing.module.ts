@@ -8,6 +8,10 @@ import { ListagemCartoesComponent } from './componentes/cartoes/listagem-cartoes
 import { CadastrarCartaoComponent } from './componentes/cartoes/cadastrar-cartao/cadastrar-cartao.component';
 import { VerFaturaComponent } from './componentes/cartoes/ver-fatura/ver-fatura.component';
 import { AlterarLimiteComponent } from './componentes/cartoes/alterar-limite/alterar-limite.component';
+import { ComprasComponent } from './componentes/compras/compras/compras.component';
+import { CadastrarCompraComponent } from './componentes/compras/cadastrar-compra/cadastrar-compra.component';
+import { RelatoriosGastosCategoriaComponent } from './componentes/compras/relatorios-gastos-categoria/relatorios-gastos-categoria.component';
+import { RelatoriosComponent } from './componentes/relatorios/relatorios/relatorios.component';
 
 
 const routes: Routes = [
@@ -47,6 +51,22 @@ const routes: Routes = [
   {
     path: 'alterarlimite',
     component: AlterarLimiteComponent
+  },
+  {
+    path: 'compras',
+    component: ComprasComponent
+  },
+  {
+    path: 'cadastrocompra',
+    component: CadastrarCompraComponent
+  },
+  {
+    path: 'realtoriogastocategoria',
+    component: RelatoriosGastosCategoriaComponent
+  },
+  {
+    path: 'relatorios',
+    component: RelatoriosComponent
   },
 ];
 

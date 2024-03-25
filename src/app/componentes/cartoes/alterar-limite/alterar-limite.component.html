@@ -1,1 +1,48 @@
-<p>alterar-limite works!</p>
+<div class="d-flex justify-content-center my-5">
+  <h1>Alterar limite</h1>
+</div>
+
+<!-- Div dados cliente -->
+<div class="d-flex justify-content-center grid gap-0 column-gap-5 bg-secondary p-5 text-white">
+  <!-- Div campo cartao, limte e validade -->
+  <div>
+    <div class="d-flex align-items-center grid gap-0 column-gap-2 mb-3">
+      <label for="cartaoNumero" class="form-label">Cartão:</label>
+      <input type="text" class="form-control" id="cartaoNumero" name="cartaoNumero" [(ngModel)]="cartao.numberCard" readonly>
+    </div>
+    <div class="d-flex align-items-center grid gap-0 column-gap-2 mb-3">
+      <label for="cartaoLimite" class="form-label">Limite:</label>
+      <input type="text" class="form-control" id="cartaoLimite" name="cartaoLimite" [(ngModel)]="cartao.limit" readonly>
+    </div>
+    <div class="d-flex align-items-center grid gap-0 column-gap-2">
+      <label for="cartaoValidade" class="form-label">Validade:</label>
+      <input type="text" class="form-control" id="cartaoValidade" name="cartaoValidade" [(ngModel)]="cartao.date" readonly>
+    </div>
+  </div>
+
+  <!-- Div campo Nome e CPF -->
+  <div>
+    <div class="d-flex align-items-center grid gap-0 column-gap-2 mb-3">
+      <label for="cartaoNome" class="form-label">Cliente:</label>
+      <input type="text" class="form-control" id="cartaoNome" name="cartaoNome" [(ngModel)]="cartao.name" readonly>
+    </div>
+    <div class="d-flex align-items-center grid gap-0 column-gap-2">
+      <label for="cartaoCPF" class="form-label">CPF:</label>
+      <input type="text" class="form-control" id="cartaoCPF" name="cartaoCPF" [(ngModel)]="cartao.cpf" readonly>
+    </div>
+  </div>
+</div>
+
+<!-- Div novo limite -->
+<div class="d-flex justify-content-center mt-1 bg-secondary p-3 text-white">
+  <div class="w-25 md:w-50 d-flex flex-column">
+    <label for="novoLimite">Novo limite:</label>
+    <input type="number" name="novoLimite" id="novoLimite" [(ngModel)]="novoLimite">
+  </div>
+</div>
+
+<!-- Div botões alterar e cancelar -->
+<div class="d-flex justify-content-center my-5">
+  <button type="submit" (click)="alterarLimite()" class="btn btn-success mx-5">Alterar</button>
+  <button type="button" (click)="cancelarAlteracao()" class="btn btn-danger">Cancelar</button>
+</div>

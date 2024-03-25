@@ -1,1 +1,29 @@
-<p>cadastrar-cartao works!</p>
+<div class="d-flex justify-content-center my-5">
+  <h1>Cadastrar Cartão</h1>
+</div>
+<div class="d-flex justify-content-center bg-secondary p-5 text-white">
+  <div class="d-flex flex-column mx-5">
+    <label for="cliente">Cliente:</label>
+    <select name="cliente" id="cliente" class="form-control" [(ngModel)]="cpf">
+      <option value="" disabled selected>Selecione um cliente</option>
+      <option *ngFor="let cliente of clientesComCartao" [value]="cliente.cpf">
+        {{ cliente.name }} - {{ cliente.cpf }}
+      </option>
+    </select>
+  </div>
+  <div class="d-flex flex-column mx-5">
+    <label for="limite">Limite:</label>
+    <input type="text" name="limite" id="limite" class="form-control" [(ngModel)]="limite" (input)="aoAlterarLimite()">
+  </div>
+</div>
+
+<!-- Alerta para cliente não selecionado -->
+<div *ngIf="!cpf && limite === 0" class="d-flex justify-content-center my-3">
+  <div class="alert alert-danger" role="alert">
+    Selecione um cliente antes de cadastrar.
+  </div>
+</div>
+<div class="d-flex justify-content-center my-5">
+  <button type="submit" (click)="cadastrarCartao()" class="btn btn-success mx-5">Cadastrar</button>
+  <button type="button" (click)="cancelarCadastro()" class="btn btn-danger">Cancelar</button>
+</div>

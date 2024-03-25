@@ -17,6 +17,11 @@ import { CartoesComponent } from './componentes/cartoes/cartoes/cartoes.componen
 import { CadastrarCartaoComponent } from './componentes/cartoes/cadastrar-cartao/cadastrar-cartao.component';
 import { AlterarLimiteComponent } from './componentes/cartoes/alterar-limite/alterar-limite.component';
 import { VerFaturaComponent } from './componentes/cartoes/ver-fatura/ver-fatura.component';
+import { ComprasComponent } from './componentes/compras/compras/compras.component';
+import { RelatoriosGastosCategoriaComponent } from './componentes/compras/relatorios-gastos-categoria/relatorios-gastos-categoria.component';
+import { CadastrarCompraComponent } from './componentes/compras/cadastrar-compra/cadastrar-compra.component';
+import { RelatoriosComponent } from './componentes/relatorios/relatorios/relatorios.component';
+import { FaturaComponent } from './componentes/cartoes/fatura/fatura.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,12 @@ import { VerFaturaComponent } from './componentes/cartoes/ver-fatura/ver-fatura.
     CartoesComponent,
     CadastrarCartaoComponent,
     AlterarLimiteComponent,
-    VerFaturaComponent
+    VerFaturaComponent,
+    ComprasComponent,
+    RelatoriosGastosCategoriaComponent,
+    CadastrarCompraComponent,
+    RelatoriosComponent,
+    FaturaComponent
   ],
   imports: [
     BrowserModule,
