@@ -11,11 +11,11 @@
       </div>
     </div>
     <div class="mb-3">
-      <label for="Nome" class="form-label">Nome (Mínimo 4 caracteres)</label>
+      <label for="Nome" class="form-label">Nome</label>
       <input type="text" class="form-control" id="Nome" name="name" placeholder="Nome deve ter no mínimo 4 caracteres " [(ngModel)]="cliente.name" required>
       <div *ngIf="form.controls['name'].invalid && (form.controls['name'].dirty || form.controls['name'].touched)" class="alert alert-warning">
         <div *ngIf="form.controls['name'].touched && cliente.name.length < 4">
-          Nome é obrigatório e deve ter no mínimo 4 caracteres.
+          Nome é obrigatório
         </div>
       </div>
     </div>
@@ -30,12 +30,12 @@
       <label for="telefone" class="form-label">Telefone</label>
       <input type="text" class="form-control" id="telefone" name="telephone" placeholder="Somente números" [(ngModel)]="cliente.telephone" pattern="[0-9]{10,11}" required>
       <div *ngIf="form.controls['telephone'].invalid && (form.controls['telephone'].dirty || form.controls['telephone'].touched)" class="alert alert-warning">
-        Telefone inválido. Deve conter entre 10 e 11 dígitos numéricos.
+      Deve conter entre 10 e 11 dígitos numéricos.
       </div>
     </div>
     <div class="d-flex justify-content-center my-5">
-      <button type="submit" class="btn btn-success mx-5">Atualizar</button>
-      <button type="button" (click)="cancelarEdicao()" class="btn btn-danger">Cancelar</button>
+      <button type="submit" class="btn btn-info mx-5">Atualizar</button>
+      <button type="button" (click)="cancelarEdicao()" class="btn btn-info">Cancelar</button>
     </div>
   </form>
 </div>
