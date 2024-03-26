@@ -4,4 +4,6 @@ export interface Relatorio {
 	categoria?: String;
   nome?: string;
   total?: number;
+  numeroCartao?: number;
+  quantidade?: number;
 }

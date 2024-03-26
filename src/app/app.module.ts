@@ -23,6 +23,9 @@ import { CadastrarCompraComponent } from './componentes/compras/cadastrar-compra
 import { RelatoriosComponent } from './componentes/relatorios/relatorios/relatorios.component';
 import { FaturaComponent } from './componentes/cartoes/fatura/fatura.component';
 import { RelatorioCategoriaComponent } from './componentes/compras/relatorio-categoria/relatorio-categoria.component';
+import { MaisComprasRealizadasComponent } from './componentes/relatorios/mais-compras-realizadas/mais-compras-realizadas.component';
+import { ComprasMaiorValorComponent } from './componentes/relatorios/compras-maior-valor/compras-maior-valor.component';
+import { NaoRealizaramComprasComponent } from './componentes/relatorios/nao-realizaram-compras/nao-realizaram-compras.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { RelatorioCategoriaComponent } from './componentes/compras/relatorio-cat
     CadastrarCompraComponent,
     RelatoriosComponent,
     FaturaComponent,
-    RelatorioCategoriaComponent
+    RelatorioCategoriaComponent,
+    MaisComprasRealizadasComponent,
+    ComprasMaiorValorComponent,
+    NaoRealizaramComprasComponent
   ],
   imports: [
     BrowserModule,

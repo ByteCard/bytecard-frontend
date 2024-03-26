@@ -56,4 +56,36 @@ export class CompraService {
     );
   }
 
+  relatorioGeralCompraMaiorValor(date: string): Observable<number> {
+    const url = `${this.API}/relatorio`;
+    const body = {
+      numberCard: 1234567890123456,
+      date: date
+    };
+    return this.http.post<any>(url, body).pipe(
+      map(response => response.compraMaiorValors)
+    );
+  }
+
+  relatorioGeralComprouNada(date: string): Observable<number> {
+    const url = `${this.API}/relatorio`;
+    const body = {
+      numberCard: 1234567890123456,
+      date: date
+    };
+    return this.http.post<any>(url, body).pipe(
+      map(response => response.comproNada)
+    );
+  }
+
+  relatorioGeralComprouMais(date: string): Observable<number> {
+    const url = `${this.API}/relatorio`;
+    const body = {
+      numberCard: 1234567890123456,
+      date: date
+    };
+    return this.http.post<any>(url, body).pipe(
+      map(response => response.comproMais)
+    );
+  }
 }

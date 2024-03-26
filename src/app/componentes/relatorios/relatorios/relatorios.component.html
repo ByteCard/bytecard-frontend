@@ -8,9 +8,9 @@
     <div class="d-flex align-items-center">
       <div class="d-flex flex-column align-items-center">
         <label for="selecioneMes">Selecione o mês:</label>
-        <input type="date" name="selecioneMes" id="selecioneMes" class="mb-2">
+        <input type="date" name="selecioneMes" id="selecioneMes" class="mb-2" [(ngModel)]="date">
         <div>
-          <button type="button" class="btn btn-success btn-sm">
+          <button type="button" (click)="visualizarRelatorio()" class="btn btn-success btn-sm">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar"
               viewBox="0 0 16 16">
               <path
@@ -25,4 +25,40 @@
   </div>
 </div>
 <!-- Puxar a relatorio de acompanhamento de clientes -->
+<!-- Mais compras realizadas -->
+<div class="mt-5">
+  <div class="row mb-1">
+    <div class="col">Mais compras realizadas</div>
+  </div>
+  <div class="row mb-1">
+    <div class="col">Nome</div>
+    <div class="col">CPF</div>
+    <div class="col">Quantidade</div>
+  </div>
+  <app-mais-compras-realizadas *ngFor="let cliente of listaComprouMais" [cliente]="cliente"></app-mais-compras-realizadas>
+</div>
+<!-- Compras de maior Valor -->
+<div class="mt-5">
+  <div class="row mb-1">
+    <div class="col">Compras de maior valor</div>
+  </div>
+  <div class="row mb-1">
+    <div class="col">Nome</div>
+    <div class="col">CPF</div>
+    <div class="col">Valor</div>
+  </div>
+  <app-compras-maior-valor *ngFor="let cliente of listaComprasMaiorValor" [cliente]="cliente"></app-compras-maior-valor>
+</div>
+<!-- Não realizaram compras -->
+<div class="mt-5">
+  <div class="row mb-1">
+    <div class="col">Não realizaram compras</div>
+  </div>
+  <div class="row mb-1">
+    <div class="col">Nome</div>
+    <div class="col">CPF</div>
+    <div class="col">Numero cartão</div>
+  </div>
+  <app-nao-realizaram-compras *ngFor="let cliente of listaNaoComprou" [cliente]="cliente"></app-nao-realizaram-compras>
+</div>
 
