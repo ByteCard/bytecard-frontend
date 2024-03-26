@@ -6,15 +6,22 @@
   <div class="d-flex justify-content-center">
     <div class="d-flex flex-column mx-5">
       <label for="cartaoNumero">Cartão:</label>
-      <input type="text" id="cartaoNumero" name="cartaoNumero" placeholder="Selecione o cartao">
+      <!-- Modificação: substituir input por select -->
+      <select name="cartaoNumero" id="cartaoNumero" class="form-control" [(ngModel)]="numeroCartao">
+        <option value="" disabled selected>Selecione o cartão</option>
+        <!-- Iterar sobre os números dos cartões -->
+        <option *ngFor="let cartao of numerosCartoes" [ngValue]="cartao">
+          {{ cartao[1] }} - {{ cartao[0] }}
+        </option>
+      </select>
     </div>
     <!-- div Selecione o mes -->
     <div class="d-flex align-items-center">
       <div class="d-flex flex-column align-items-center">
         <label for="selecioneMes">Selecione o mês:</label>
         <div>
-          <input type="date" name="selecioneMes" id="selecioneMes" class="mx-2">
-          <button type="button" class="btn btn-success btn-sm">
+          <input type="date" name="selecioneMes" id="selecioneMes" class="mx-2" [(ngModel)]="date">
+          <button type="button" (click)="gerarRelatorio()" class="btn btn-success btn-sm">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar"
               viewBox="0 0 16 16">
               <path
@@ -29,7 +36,16 @@
   </div>
 </div>
 <!-- Puxar a relatorio de gastor por categoria -->
-
+<div class="mt-5">
+  <div class="row mb-1">
+    <div class="col">Categoria</div>
+    <div class="col">Valor Gasto</div>
+  </div>
+  <app-relatorio-categoria *ngFor="let relatorio of listaRelatorios" [relatorio]="relatorio"></app-relatorio-categoria>
+</div>
+<div class="d-flex justify-content-center my-5">
+  <h2>Valor total gasto: {{ valorTotal }}</h2>
+</div>
  <!-- Botões de voltar -->
  <div class="d-flex justify-content-center my-5">
   <button type="submit" (click)="voltar()" class="btn btn-success mx-5">Voltar</button>

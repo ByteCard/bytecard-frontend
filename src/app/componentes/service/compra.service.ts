@@ -34,4 +34,26 @@ export class CompraService {
     return this.http.post<any>(url, body);
   }
 
+  relatorioCategoria(numberCard: number, date: string): Observable<any[]> {
+    const url = `${this.API}/categoria`;
+    const body = {
+      numberCard: numberCard,
+      date: date
+    };
+    return this.http.post<any>(url, body).pipe(
+      map(response => response.dadosCategoriaRelatorios)
+    );
+  }
+
+  relatorioCategoriaTotal(numberCard: number, date: string): Observable<number> {
+    const url = `${this.API}/categoria`;
+    const body = {
+      numberCard: numberCard,
+      date: date
+    };
+    return this.http.post<any>(url, body).pipe(
+      map(response => response.valorTotalGasto)
+    );
+  }
+
 }

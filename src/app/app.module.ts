@@ -22,6 +22,7 @@ import { RelatoriosGastosCategoriaComponent } from './componentes/compras/relato
 import { CadastrarCompraComponent } from './componentes/compras/cadastrar-compra/cadastrar-compra.component';
 import { RelatoriosComponent } from './componentes/relatorios/relatorios/relatorios.component';
 import { FaturaComponent } from './componentes/cartoes/fatura/fatura.component';
+import { RelatorioCategoriaComponent } from './componentes/compras/relatorio-categoria/relatorio-categoria.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { FaturaComponent } from './componentes/cartoes/fatura/fatura.component';
     RelatoriosGastosCategoriaComponent,
     CadastrarCompraComponent,
     RelatoriosComponent,
-    FaturaComponent
+    FaturaComponent,
+    RelatorioCategoriaComponent
   ],
   imports: [
     BrowserModule,
