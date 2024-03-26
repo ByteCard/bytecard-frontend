@@ -4,7 +4,7 @@
   <div class="col">{{ cartao.limit }}</div>
   <div class="col">{{ cartao.date }}</div>
   <div class="col d-flex">
-    <button (click)="alterarLimite()" type="button" class="btn btn-secondary btn-sm">Alterar limite</button>
+    <button (click)="alterarLimite()" type="button" class="btn btn-info">Alterar limite</button>
     <button (click)="verFatura()" type="button" class="btn btn-warning btn-sm mx-2">Ver fatura</button>
     <ng-container *ngIf="cartao.status">
       <button (click)="ativarDesativarCartao()" type="submit" class="btn btn-danger btn-sm">Cancelar</button>
